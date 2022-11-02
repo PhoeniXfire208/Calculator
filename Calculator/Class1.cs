@@ -43,7 +43,6 @@ namespace Calculator
             return instance * number;
         }
 
-        // вычитание
         public static Length operator -(Length instance, double number)
         {
             return new Length(instance.value - number, instance.type); ;
@@ -54,7 +53,6 @@ namespace Calculator
             return instance - number;
         }
 
-        // деление
         public static Length operator /(Length instance, double number)
         {
             return new Length(instance.value / number, instance.type); ;
