@@ -35,7 +35,7 @@ namespace Calculator
 
         public static Length operator *(Length instance, double number)
         {
-            return new Length(instance.value * number, instance.type); ;
+            return new Length(instance.value * number, instance.type);
         }
 
         public static Length operator *(double number, Length instance)
@@ -45,7 +45,7 @@ namespace Calculator
 
         public static Length operator -(Length instance, double number)
         {
-            return new Length(instance.value - number, instance.type); ;
+            return new Length(instance.value - number, instance.type);
         }
 
         public static Length operator -(double number, Length instance)
@@ -55,7 +55,7 @@ namespace Calculator
 
         public static Length operator /(Length instance, double number)
         {
-            return new Length(instance.value / number, instance.type); ;
+            return new Length(instance.value / number, instance.type);
         }
 
         public static Length operator /(double number, Length instance)
@@ -146,6 +146,16 @@ namespace Calculator
         public static Length operator -(Length instance1, Length instance2)
         {
             return instance1 - instance2.To(instance1.type).value;
+        }
+
+        public static Length operator *(Length instance1, Length instance2)
+        {
+            return instance1 * instance2.To(instance1.type).value;
+        }
+
+        public static Length operator /(Length instance1, Length instance2)
+        {
+            return instance1 / instance2.To(instance1.type).value;
         }
     }
 }
